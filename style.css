@@ -1,19 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-html{
+
+
+/* CSS Reset for forms and base text */
+* {
     box-sizing: border-box;
-}
+    margin: 0;
+    padding: 0;
+  }
 
-body{
+
+body {
     margin: 0;
     min-height: 100vh;
-    display:flex;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-optical-sizing: auto;
+    background-color: whitesmoke;
+    color: #333;
+    display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.test{
-    color:dodgerblue;
-   margin:20px;
+.container {
 
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    margin-block-end: 1.5rem;
+}
+
+.form-container {
+    margin-bottom: 30px;
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+}
+
+
+.inputs-container {
+    display:flex;
+
+
+}
+.input-group {
+    display:flex;
+    flex-direction:column;
+    width: 25%;
+}
+
+label {
+    font-family:"Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:bold;
+    padding: 0 0 5px;
+}
+
+input, select, button {
+    all: unset;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+   
+    color: black;
+    font: inherit;
+  }
+  
+
+label, select, input {
+    flex:1;
+    margin: 0 5px;
+}
+
+button {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+
+}
+
+button:hover {
+    background-color: black;
+}
+
+@media (max-width:600px) {
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        margin-block-end: .5rem;
+    }
+
+    .inputs-container {
+        flex-direction: column;
+        gap:16px;
+    }
+    .input-group {
+        width:100%;
+    }
 }
